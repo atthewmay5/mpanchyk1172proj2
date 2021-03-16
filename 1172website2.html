@@ -1,0 +1,48 @@
+<!DOCTYPE = html>
+<html>
+
+	<head>
+	
+		<title>Task List</title>
+		<link rel="stylesheet" href="form.css">
+	
+	</head>
+
+	<body>
+	
+		<div class="taskform">
+			<form id="tasks">
+			
+				<label for="title">Title:</label><br>
+				<input type="text" id="title" name="title"><br><br>
+				<label>Priority:</label>
+				<select id="priority">
+					<option value="low">Low</option>
+					<option value="medium">Medium</option>
+					<option value="high">High</option>
+				</select>
+				
+				<br><br>
+				<input type="radio" id="pending" name="status" value="pending" checked>
+				<label>Pending</label>
+				<input type="radio" id="complete" name="status" value="complete">
+				<label>Complete</label>
+				
+				<br><br>
+				<input type="submit" value="Create"><br>
+				
+			
+			</form>
+	
+		</div>
+		<br>
+		<ul id="task">
+			
+		</ul>
+	
+		<script src="form.js"></script>
+
+	
+	</body>
+
+</html>
