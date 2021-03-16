@@ -55,6 +55,23 @@ document.addEventListener('DOMContentLoaded', function(){
 	document.addEventListener('click', function(ev) {
 		if (ev.target.tagName === 'LI') {
 			ev.target.classList.toggle('finished');
+			for( var i = 0; i < listItems.length; i++){ 
+    
+			if ( listItems[i].tasktitle === element.parentElement.getAttribute(title)) { 
+    
+				if(listItems[i].status === 'pending'){
+					
+					listItems[i].status = 'complete';
+					
+				} else {
+					
+					listItems[i].status = 'pending';
+					
+				}
+			
+			}
+    
+			}
 		}
 	}, false);
 		
@@ -63,6 +80,14 @@ document.addEventListener('DOMContentLoaded', function(){
 		element=event.target;
 		if(element.className === 'remove'){
 			element.parentElement.remove();
+			for( var i = 0; i < listItems.length; i++){ 
+    
+			if ( listItems[i].tasktitle === element.parentElement.getAttribute(title)) { 
+    
+            listItems.splice(i, 1); 
+			}
+    
+			}
 		}
 	});
 
